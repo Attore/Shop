@@ -9,6 +9,7 @@
     --red-color: #F26376;
     --super-dark-color: #222224;
     --white-color: #FBFBFB;
+    --super-white-gray-color: #E1E1E1;
 }
 
 body {
@@ -239,13 +240,14 @@ body {
     background: var(--super-dark-color);
     max-width: 1600px;
     min-height: 341px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 230px 0 230px;
 }
 
 .advantages__item {
@@ -264,3 +266,114 @@ body {
 .advantages__text {
     color: var(--white-color);
 }
+
+.subscribe {
+    background-image: url(../img/back-footer.jpg);
+    background-size: cover;
+    max-width: 1600px;
+    min-height: 448px;
+}
+
+.subscribes {
+    display: flex;
+    justify-content: space-between;
+    min-height: 448px;
+}
+
+.subscribe__quote {
+    width: 359px;
+    text-align: center;
+}
+
+.subscribe__img {
+    margin: 87px 0 0 0;
+}
+
+.subscribe__text {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--super-dark-color);
+}
+
+.subscribe__title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.subscribe__sub-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    color: var(--super-dark-color);
+}
+.subscribe__button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 359px;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.subscribe__email {
+    width: 322px;
+    height: 49px;
+    background-color: var(--super-white-gray-color);
+    margin-top: 32px;
+    border-radius: 20px 20px 20px 20px;
+    border: 0;
+    padding-left: 22px;
+    position: relative;
+}
+
+.footer__copyright {
+    background-color: var(--super-dark-color);
+    min-height: 79px;
+    max-width: 1600px;
+}
+
+.footer__copyright-flex {
+    display: flex;
+    justify-content: space-between;
+    min-height: 79px;
+}
+
+.footer__submit {
+    position: absolute;
+    border-radius: 0px 20px 20px 0px;
+    width: 100px;
+    height: 49px;
+    left: 1137px;
+    top: 3651px;
+    background-color: var(--red-color);
+    border: 0;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__link-icon {
+    padding: 9px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--white-color);
+    margin: 24px 7px 24px 0;
+}
+
