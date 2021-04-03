@@ -10,6 +10,9 @@
     --super-dark-color: #222224;
     --white-color: #FBFBFB;
     --super-white-gray-color: #E1E1E1;
+    --white-white-color: #FFFFFF;
+    --light-pink-color: #F8F3F4;
+    --transperent-color: #B1B1B1;
 }
 
 body {
@@ -42,6 +45,7 @@ body {
 
 .header__navigation {
     display: none;
+    position: absolute;
 }
 
 .header__container {
@@ -49,6 +53,9 @@ body {
     justify-content: space-between;
     min-height: 75px;
     align-items: center;
+}
+.header__button:active .header__navigation {
+    display: block;
 }
 
 .header__logo {
@@ -59,6 +66,7 @@ body {
     background: transparent;
     border: none;
     margin: 0 33px 0 0;
+    position: relative;
 }
 
 .header__link {
@@ -157,6 +165,27 @@ body {
     flex-direction: column;
 }
 
+.overlay {
+    display: none;
+}
+
+.products__item {
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    min-height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+.products__item:hover .overlay,
+.products__item:hover .product__button {
+    display: block;
+}
+
 .products__title {
     font-size: 30px;
     line-height: 36px;
@@ -177,6 +206,20 @@ body {
 
 .product__button {
     display: none;
+    position: absolute;
+    top: 200px;  
+    left: 100px;
+    background: transparent;
+    color: var(--white-white-color);
+    border: 1px solid var(--white-white-color);
+    padding: 13px 15px 13px 50px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    background-repeat: no-repeat;
+    background-image: url(../img/product_button.svg);
+    background-position: left 15% top 50%;
 }
 
 .products__list {
@@ -187,10 +230,6 @@ body {
 
 .products__item {
     width: 360px;
-}
-
-.product__img {
-    display: block;
 }
 
 .product__description {
@@ -235,6 +274,12 @@ body {
     align-self: center;
     margin: 0 0 95px;
 }
+
+.products__button:hover {
+    background-color: var(--dark-pink-color);
+    color: var(--white-white-color);
+}
+
 
 .advantages {
     background: var(--super-dark-color);
@@ -317,18 +362,22 @@ body {
     width: 359px;
     flex-direction: column;
     justify-content: center;
-    
+    position: relative;    
 }
 
 .subscribe__email {
-    width: 322px;
+    width: 300px;
     height: 49px;
     background-color: var(--super-white-gray-color);
     margin-top: 32px;
     border-radius: 20px 20px 20px 20px;
     border: 0;
     padding-left: 22px;
-    position: relative;
+}
+
+.subscribe__email:active,
+.subscribe__email:focus {
+    outline: none;
 }
 
 .footer__copyright {
@@ -344,14 +393,20 @@ body {
 }
 
 .footer__submit {
-    position: absolute;
     border-radius: 0px 20px 20px 0px;
     width: 100px;
     height: 49px;
-    left: 1137px;
-    top: 3651px;
+    left: 269px;
+    top: 249px;
     background-color: var(--red-color);
     border: 0;
+    position: absolute;
+    color: var(--white-white-color);
+    font-weight: 400;
+}
+
+.footer__submit:focus {
+    outline: none;
 }
 
 .copyright {
@@ -377,3 +432,177 @@ body {
     margin: 24px 7px 24px 0;
 }
 
+.social__link-icon:hover {
+    background-color: var(--dark-pink-color);
+    fill: var(--white-color);
+}
+
+.sub__header {
+    max-width: 1600px;
+    min-height: 148px;
+    background: var(--light-pink-color);
+    margin-bottom: 64px;
+}
+
+.sub__header-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    color: var(--dark-pink-color);
+    padding: 59px 0 0 0;
+}
+
+.main__registration {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__registration {
+    flex-grow: 1;
+}
+
+legend {
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--black-color);
+}
+
+.radio {
+    display: none;
+}
+
+.radio__label {
+    position: relative;
+    margin: 0 30px 0 24px;
+}
+
+.form__radio {
+    margin-bottom: 31px;
+}
+
+.radio__label:before {
+position: absolute;
+content: '';
+width: 17px;
+height: 17px;
+left: -23px;
+border: 1px solid #A4A4A4;
+border-radius: 50%;
+}
+
+.radio__label::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    left: -19px;
+    top: 4px;
+    background: var(--white-gray-color);
+    border-radius: 50%;
+    display: none;
+}
+
+.radio:checked+.radio__label::after {
+    display: block ;
+}
+.form__name {
+    margin: 20px 0 20px 0;
+}
+
+.form__lastname {
+    margin: 0 0 31px 0;
+}
+[type="text"],
+[type="email"],
+[type="password"] {
+    padding: 0 0 0 17px;
+    width: 360px;
+    min-height: 45px;
+    border: 1px solid #A4A4A4;
+}
+::placeholder {
+    color: #B1B1B1;
+}
+
+.form__email {
+    margin: 20px 0 20px 0;
+}
+
+.form__password {
+    margin-bottom: 15px;
+}
+
+.titel__registation {
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--transperent-color);
+    width: 359px;
+    margin: 0 0 39px 0;
+}
+
+.form__button {
+    position: relative;
+}
+
+.form__button-style {
+    background: var(--dark-pink-color);
+    font-weight: 400;
+    color: var(--white-white-color);
+    text-transform: uppercase;
+    width: 167px;
+    min-height: 50px;
+    margin-bottom: 96px;
+    position: relative;
+    padding: 0 50px 0 0;
+    border: none;
+}
+
+.form__button-arrow {
+    position: absolute;
+    top: 19px;
+    left: 112px;
+}
+
+.perks {
+font-size: 24px;
+line-height: 29px;
+color: var(--dark-color);
+flex-grow: 1;
+width: 625px;
+}
+
+.perks__title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.perks__text {
+    margin: 0 0 21px 0;
+}
+
+.perks__list {
+    padding: 0 0 0 40px;
+}
+
+.perks__item {
+    margin: 0 0 16px 0;
+    position: relative;
+}
+
+.perks__item::before {
+    content: '';
+    width: 20px;
+    height: 20px;    
+    position: absolute;
+    background-image: url(../img/jack.svg);
+    top: 10px;
+    left: -36px;
+    background-repeat: no-repeat;
+    
+}
