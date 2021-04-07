@@ -1,0 +1,53 @@
+.header {
+    background-color: $black-color;
+
+    &__navigation {
+        display: none;
+        position: absolute;
+        width: 100px;
+        top: 100%;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+        
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+    
+    &__button {
+        background: transparent;
+        border: none;
+        margin: 0 33px 0 0;
+    }
+
+    &__sub {
+        max-width: 1600px;
+        min-height: 148px;
+        background: $light-pink-color;
+        margin-bottom: 64px;
+    }
+    
+    &__sub-title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: $dark-pink-color;
+        padding: 59px 0 0 0;
+    }
+    
+    &__link {
+        margin: 0 33px 0 0;
+    
+        &:hover+ .header__navigation {
+            display: block;
+        }
+    }
+}
+
+

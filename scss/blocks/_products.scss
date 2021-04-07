@@ -1,0 +1,137 @@
+.products {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        position: relative;
+        width: 360px;
+
+        &:hover .overlay,
+        &:hover .product__button {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 36px;
+        color: $black-color;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 6px;
+    }
+
+    &__text {
+        color: $white-gray-color;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 48px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        color: $red-color;
+        padding: 14px 38px 14px 38px;
+        background: white;
+        border: 1px solid #FF6A6A;
+        min-width: 211px;
+        min-height: 47px;
+        align-self: center;
+        margin: 0 0 95px;
+
+        &:hover {
+            background-color: $dark-pink-color;
+            color: $white-white-color;
+        }
+    }
+}
+
+.product {
+    
+    &__button {
+    display: none;
+    position: absolute;
+    top: 200px;  
+    left: 100px;
+    background: transparent;
+    color: $white-white-color;
+    border: 1px solid $white-white-color;
+    padding: 13px 15px 13px 50px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    background-repeat: no-repeat;
+    background-image: url(../img/product_button.svg);
+    background-position: left 15% top 50%;
+    }
+
+    &__description {
+        background: $gray-color;
+        padding: 25px 29px 20px 17px;
+        margin: 0 0 48px;
+    }
+
+    &__title {
+        font-size: 13px;
+        line-height: 16px;
+        color: $dark-color;
+        text-transform: uppercase;
+        padding: 0 0 13px;
+    }
+    
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        color: $gray-color-text;
+        padding: 0 0 18px;
+    }
+
+    &__price {
+        color: $dark-pink-color;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 400;
+    }
+}
+
+.overlay {
+    display: none;
+    width: 100%;
+    min-height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
