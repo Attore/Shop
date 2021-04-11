@@ -1,23 +1,67 @@
 .footer {
-    
+        
     &__advantages {
     background: $super-dark-color;
     max-width: 1600px;
     min-height: 341px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    }
+
+    &__submit {
+        border-radius: 0px 20px 20px 0px;
+        width: 100px;
+        height: 49px;
+        left: 266px;
+        top: 33px;
+        background-color: $red-color;
+        border: 0;
+        position: absolute;
+        color: $white-white-color;
+        font-weight: 400;
+    
+        &:focus {
+            outline: none;
+        }
+
+            @include tablet {
+                top: 28px;
+            }
+
+            @include mobile {
+                top: 23px;
+            }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
     }
 
     &__advantages-item {
         width: 360px;
         text-align: center;
+
+        @include tablet {
+            margin: 48px 0 0 0;
+            .footer__advantages-text--botom {
+                margin-bottom: 64px;            
+            }
+        }
+
+            @include mobile {
+                .footer__advantages-text--botom {
+                    margin-bottom: 81px;            
+                }
     }
+}
 
     &__advantages-title {
         font-size: 20px;
@@ -36,12 +80,24 @@
         background-size: cover;
         max-width: 1600px;
         min-height: 448px;
+        margin: 0 auto;
+
+        &-sub--button {
+            position: relative;
+        }
+
+        
     }
 
     &__subscribes {
         display: flex;
         justify-content: space-between;
         min-height: 448px;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
     }
 
     &__subscribe-quote {
@@ -51,6 +107,10 @@
 
     &__subscribe-img {
         margin: 87px 0 0 0;
+
+        @include tablet {
+            margin: 53px 0 0 0;
+        }
     }
 
     &__subscribe-text {
@@ -59,6 +119,14 @@
         font-weight: 400;
         line-height: 24px;
         color: $super-dark-color;
+
+            @include tablet {
+                margin-bottom: 48px;
+            }
+
+            @include mobile {
+                margin-bottom: 59px;
+            }
     }
 
     &__subscribe-title {
@@ -82,7 +150,7 @@
         width: 359px;
         flex-direction: column;
         justify-content: center;
-        position: relative;    
+            
     }
 
     &__subscribe-email {
@@ -93,41 +161,43 @@
         border-radius: 20px 20px 20px 20px;
         border: 0;
         padding-left: 22px;
-    
-        &:active,
-        &:focus {
-            outline: none;
-        }
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            @include tablet {
+                margin:27px 0 140px 0;
+            }
+
+            @include mobile {
+                margin:22px 0 109px 0;
+            }
     }    
+
+    
 
     &__copyright {
         background-color: $super-dark-color;
         min-height: 79px;
         max-width: 1600px;
+        margin: 0 auto;
     }
 
     &__copyright-flex {
         display: flex;
         justify-content: space-between;
         min-height: 79px;
+            
+            @include mobile {
+                flex-direction: column-reverse;
+                align-items: center;
+                padding: 43px 0 9px 0;
+            }
     }
 
-    &__submit {
-        border-radius: 0px 20px 20px 0px;
-        width: 100px;
-        height: 49px;
-        left: 269px;
-        top: 249px;
-        background-color: $red-color;
-        border: 0;
-        position: absolute;
-        color: $white-white-color;
-        font-weight: 400;
-    
-        &:focus {
-            outline: none;
-        }
-    }    
+  
 
     &__copy {
         font-size: 16px;
@@ -157,3 +227,4 @@
         }
     }
 }
+

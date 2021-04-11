@@ -8,14 +8,25 @@
     }
 
     &__item {
-        width: 360px;
+        width: 31%;
         min-height: 260px;
         flex-direction: column;
         display: flex;
         margin: 0 0 30px;
         justify-content: center;
         align-items: center;
-    }
+
+            @include tablet {
+                min-height: 168px;
+                margin: 0 0 19px;
+            }
+            
+            @include mobile {
+                width: 100%;
+                min-height: 247px;
+                margin: 0 0 32px;
+            }
+        }
 
     &__item--woman {
         background-image: url(../img/girl_carts.jpg);
@@ -37,6 +48,15 @@
         background-size: cover;
         width: 100%;
         margin: 0;
+
+            
+        @include tablet {
+            min-height: 116px;
+        }
+
+        @include mobile {
+            min-height: 111px;
+        }
     }
 
     &__title {
