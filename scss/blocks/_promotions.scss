@@ -1,0 +1,56 @@
+.promotions {
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 97px;
+    }
+
+    &__item {
+        width: 360px;
+        min-height: 260px;
+        flex-direction: column;
+        display: flex;
+        margin: 0 0 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item--woman {
+        background-image: url(../img/girl_carts.jpg);
+        background-size: cover;
+        }
+
+    &__item--man {
+        background-image: url(../img/man_carts.jpg);
+        background-size: cover;
+        }
+
+    &__item--kids {
+        background-image: url(../img/boy_carts.jpg);
+        background-size: cover;
+    }
+
+    &__item--accesorise {
+        background-image: url(../img/accesorise_carts.jpg);
+        background-size: cover;
+        width: 100%;
+        margin: 0;
+    }
+
+    &__title {
+        align-self: center;
+        color: white;
+        text-transform: uppercase;
+        @include font (16px, 19px, 400);
+    }
+
+&__text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: $dark-pink-color;
+    text-transform: uppercase;
+    }
+}

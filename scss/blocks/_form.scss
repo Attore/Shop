@@ -1,0 +1,140 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+
+    &__lastname {
+        margin: 0 0 31px 0;
+    }
+    
+    &__registration {
+        flex-grow: 1;
+    }
+    
+    &__radio {
+    display: none;
+        
+        &-label {
+            position: relative;
+            margin: 0 30px 0 24px;
+        
+            &::before {
+                position: absolute;
+                content: '';
+                width: 17px;
+                height: 17px;
+                left: -23px;
+                border: 1px solid #A4A4A4;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                left: -19px;
+                top: 4px;
+                background: $white-gray-color;
+                border-radius: 50%;
+                display: none;
+            }
+        }
+
+        &:checked+ .form__radio-label::after {
+            display: block ;
+        }
+    }
+
+    &__name {
+        margin: 20px 0 20px 0;
+    }
+
+    &__email {
+        margin: 20px 0 20px 0;
+    }
+
+    &__password {
+        margin-bottom: 15px;
+    }
+
+    &__titel {
+        font-size: 13px;
+        line-height: 16px;
+        color: $transperent-color;
+        width: 359px;
+        margin: 0 0 39px 0;
+    }
+
+    &__button {
+        position: relative;
+    
+        &-style {
+            background: $dark-pink-color;
+            font-weight: 400;
+            color: $white-white-color;
+            text-transform: uppercase;
+            width: 167px;
+            min-height: 50px;
+            margin-bottom: 96px;
+            position: relative;
+            padding: 0 50px 0 0;
+            border: none;
+        }
+        &-arrow {
+            position: absolute;
+            top: 19px;
+            left: 112px;
+        }
+    }
+}
+
+legend {
+    font-size: 16px;
+    line-height: 19px;
+    color: $black-color;
+}
+
+[type="text"],
+[type="email"],
+[type="password"] {
+    padding: 0 0 0 17px;
+    width: 360px;
+    min-height: 45px;
+    border: 1px solid $grey-border-color;
+}
+
+::placeholder {
+    color: $transperent-color;
+}
+
+.radio {
+    margin-bottom: 31px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
