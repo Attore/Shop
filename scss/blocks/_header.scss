@@ -5,11 +5,14 @@
         background: transparent;
         border: none;
 
+        @include mobile {
+            width: 150px;
+        }
+
 
         &:focus {
             background: white;
         }
-
     }
 
     &__loup {
@@ -18,7 +21,6 @@
         border: none;
         outline: none;
         fill: white;
-
     }
 
     &__navigation {
@@ -125,7 +127,6 @@
             color: $dark-pink-color;
             text-transform: uppercase;
         }
-
     }
 
     &__link {
