@@ -2,12 +2,27 @@
     display: flex;
     justify-content: space-between;
 
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
     &__lastname {
         margin: 0 0 31px 0;
     }
     
     &__registration {
         flex-grow: 1;
+        
+
+            @include tablet {
+                flex-grow: 0;
+                }
+
+                @include mobile {
+                    width: 100%;
+                    margin: 0 8px;
+                }
     }
     
     &__radio {
