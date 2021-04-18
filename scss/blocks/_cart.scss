@@ -1,0 +1,265 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+
+    &__box {
+        display: flex;
+        -webkit-box-shadow: 21px 34px 36px 3px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 21px 34px 36px 3px rgba(34, 60, 80, 0.2);
+        box-shadow: 21px 34px 36px 3px rgba(34, 60, 80, 0.2);
+
+        @include mobile {
+            -webkit-box-shadow: 21px 34px 36px -26px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 21px 34px 36px -26px rgba(34, 60, 80, 0.2);
+            box-shadow: 21px 34px 36px -26px rgba(34, 60, 80, 0.2);
+        }
+
+        &-up {
+            margin: 96px 0 40px 0;
+
+            @include tablet {
+                margin: 59px 0 40px 0;
+            }
+
+            @include mobile {
+                margin: 39px 0 32px 0;
+            }
+        }
+
+        &-down {
+            margin: 0 0 72px 0;
+
+            @include tablet {
+                margin: 0 0 62px 0;
+            }
+
+            @include mobile {
+                margin: 0 0 30px 0;
+            }
+        }
+
+
+        &-info {
+            width: 390px;
+            margin: 0 0 0 31px;
+
+            @include tablet {
+                width: 472px;
+            }
+
+            @include mobile {
+                width: 214px;
+                min-height: 188px;
+            }
+        }
+
+        &-titel {
+            @include font (24px, 29px, 400);
+            color: $black-color;
+            padding: 22px 0 42px 0;
+            width: 262px;
+
+            @include mobile {
+                width: 143px;
+                @include font (16px, 19px, 400);
+            }
+        }
+
+        &-text {
+            @include font (22px, 26px, 400);
+            color: $dark-grey-color;
+            padding: 0 0 6px 0;
+
+            @include mobile {
+                @include font (14px, 17px, 400);
+            }
+        }
+
+        &-img {
+            @include mobile {
+                width: 143px;
+                height: auto;
+            }
+        }
+    }
+
+    &__price {
+        color: $dark-pink-color;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 128px 0;
+
+        @include tablet {
+            margin: 0 0 64px 0;
+            justify-content: space-around;
+        }
+
+        @include mobile {
+            justify-content: space-between;
+            margin: 0 0 48px 0;
+        }
+
+        &-reset {
+            text-transform: uppercase;
+            @include font (14px, 17px, 300);
+            color: $dark-color;
+            padding: 17px 40px;
+            background: $white-white-color;
+            border: 1px solid $grey-border-color;
+
+            @include mobile {
+                padding: 9px 18px;
+                text-transform: lowercase;
+                @include font (12px, 14px, 300);
+                flex-grow: 1;
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        @include font (14px, 17px, 400);
+        color: $dark-color;
+        background: $white-white-color;
+        border: 1px solid $grey-border-color;
+        padding: 17px 40px;
+
+        @include mobile {
+            padding: 9px 9px;
+            text-transform: lowercase;
+            @include font (12px, 14px, 400);
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 5px 0 0;
+        }
+    }
+
+    &__forms {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        &-total {
+            width: 360px;
+            min-height: 214px;
+            background: $cart-forms-color;
+            margin: 58px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            @include tablet {
+                margin: 37px 0 136px 0;
+            }
+
+            @include mobile {
+                margin: 0 0 96px 0;
+            }
+        }
+
+        &-titel {
+            @include font (11px, 13px, 400);
+            text-transform: uppercase;
+            padding: 39px 34px 12px 0;
+        }
+
+        &-text {
+            @include font (16px, 19px, 300);
+            text-transform: uppercase;
+            position: relative;
+            padding: 0 37px 0 0;
+
+            &--grand {
+                color: $dark-pink-color;
+                @include font (16px, 19px, 700);
+            }
+
+            &:after {
+                content: '';
+                width: 275px;
+                outline: 1px solid #E2E2E2;
+                background: #E2E2E2;
+                position: absolute;
+                top: 199%;
+                right: 22%;
+            }
+        }
+
+        &-link {
+            text-transform: uppercase;
+            text-decoration: none;
+            @include font (16px, 19px, 300);
+            padding: 15px 42px;
+            background: $dark-pink-color;
+            color: $white-white-color;
+            margin: 39px 0 0 0;
+            align-self: center;
+
+        }
+    }
+}
+
+.carts {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 96px 0 0 0;
+
+        @include tablet {
+            margin: 0
+        }
+
+        &-button {
+            @include font (11px, 13px, 300);
+            text-transform: uppercase;
+            color: $some-black-color;
+            padding: 10px 14px;
+            background: $white-white-color;
+            border: 1px solid $grey-border-color;
+            margin: 24px 0 0 0;
+
+            @include tablet {
+                margin: 24px 0 128px 0;
+            }
+
+            @include mobile {
+                margin: 24px 0 48px 0;
+            }
+        }
+    }
+
+    &__legend {
+        @include font (16px, 19px, 300);
+        text-transform: uppercase;
+        color: $black-color;
+    }
+}
+
+#country,
+#state,
+#zip {
+    width: 360px;
+    min-height: 45px;
+    border: 1px solid $grey-border-color;
+    margin: 20px 0 0 0;
+}

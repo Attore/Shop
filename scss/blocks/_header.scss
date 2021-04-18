@@ -1,53 +1,135 @@
 .header {
     background-color: $black-color;
+    
 
     &__navigation {
         display: none;
         position: absolute;
-        width: 100px;
+        background-color: $white-white-color;
+        min-height: 764px;
+        width: 232px;
         top: 100%;
+        right: 0%;
+        
     }
-    
+
+    &__title {
+        @include font (14px, 17px, bold);
+        text-transform: uppercase;
+        color: $dark-color;
+        padding: 37px 0 4px 34px;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
         min-height: 75px;
         align-items: center;
+        position: relative;
+
+        @include tablet {
+            padding: 0 16px;
+        }
     }
-        
+
     &__logo {
         margin: 0 41px 0 0;
     }
-    
+
     &__button {
         background: transparent;
         border: none;
         margin: 0 33px 0 0;
+        fill: $button-white;
+
+        &:focus+.header__navigation {
+            display: block;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     &__sub {
         max-width: 1600px;
         min-height: 148px;
         background: $light-pink-color;
-        margin-bottom: 64px;
-    }
-    
-    &__sub-title {
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 29px;
-        color: $dark-pink-color;
-        padding: 59px 0 0 0;
-    }
-    
-    &__link {
-        margin: 0 33px 0 0;
-    
-        &:hover+ .header__navigation {
+        margin: 0 auto;
+        display: flex;
+
+        &-title {
+            text-transform: uppercase;
+            @include font (14px, 17px, 400);
+            color: $dark-pink-color;
+            padding: 20px 0 12px 33px;
             display: block;
+            text-decoration: none;
+            align-self: center;
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        &-navigation-link {
+            display: block;
+            @include font (14px, 17px, 400);
+            color: $grey-for-menu;
+            padding: 0px 0 12px 55px;
+            text-decoration: none;
         }
     }
+
+    &__link {
+        margin: 0 33px 0 0;
+
+        @include mobile {
+            & {
+                display: none;
+            }
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__search {
+        border: 0;
+        height: 26px;
+        width: 26px;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:focus+&-input {
+            background: white;
+        }
+
+
+        &-icon {
+            fill: $button-white;
+            background-color: $black-color;
+        }
+
+        &-input {
+            top: 40%;
+            left: 22%;
+            background: transparent;
+            transition: background .55s ease;
+            border: 0;
+            outline: 0;
+
+            &:focus {
+                background: white;
+            }
+
+            @include mobile {
+                width: 152px;
+            }
+                }
+    }
 }
-
-
