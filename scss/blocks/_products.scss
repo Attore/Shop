@@ -6,9 +6,16 @@
         position: relative;
         width: 360px;
 
-        &:hover .overlay,
+        &:hover .overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
         &:hover .product__button {
             display: block;
+        }
+
+        @include min-mobile {
+            width: 100%;
         }
     }
 
@@ -34,6 +41,11 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__button {
@@ -57,23 +69,23 @@
 }
 
 .product {
-    
+
     &__button {
-    display: none;
-    position: absolute;
-    top: 200px;  
-    left: 100px;
-    background: transparent;
-    color: $white-white-color;
-    border: 1px solid $white-white-color;
-    padding: 13px 15px 13px 50px;
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    background-repeat: no-repeat;
-    background-image: url(../img/product_button.svg);
-    background-position: left 15% top 50%;
+        display: none;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        background: transparent;
+        padding: 13px 15px 13px 50px;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        background-position: left 15% top 50%;
+        background-repeat: no-repeat;
+        color: $white-white-color;
+        border: 1px solid $white-white-color;
+        background-image: url(../img/product_button.svg);
     }
 
     &__description {
@@ -89,7 +101,7 @@
         text-transform: uppercase;
         padding: 0 0 13px;
     }
-    
+
     &__text {
         font-size: 14px;
         font-weight: 300;
@@ -104,34 +116,20 @@
         line-height: 19px;
         font-weight: 400;
     }
+
+    &__img {
+
+        @include min-mobile {
+            width: 100%;
+        }
+    }
 }
 
 .overlay {
-    display: none;
     width: 100%;
     min-height: 420px;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     position: absolute;
     top: 0;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    transition: background .55s ease-in-out;
+}
