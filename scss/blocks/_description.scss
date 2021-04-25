@@ -7,6 +7,17 @@
     z-index: 1;
     background: #FFFFFF;
     min-height: 601px;
+    border: 1px solid $grey-border-color;
+
+        @include tablet {
+            margin-top: 0;
+            max-width: 768px;
+            }
+
+        @include mobile {
+            max-width: 375px;
+            margin-bottom: 64px;
+        }
 
     &__titel {
         @include font (14px, 17px, 300);
@@ -30,6 +41,10 @@
             color: $some-black-color;
             text-transform: uppercase;
             padding: 0 0 48px 0;
+
+            @include mobile {
+                padding: 0 0 32px 0;
+            }
         }
     }
 
@@ -39,6 +54,11 @@
         width: 555px;
         text-align: center;
         padding: 0 0 32px 0;
+
+        @include mobile {
+            max-width: 326px;
+            @include font (14px, 20px, 300);
+        }
     }
 
     &__price {
@@ -54,6 +74,15 @@
             width: 647px;
             top: 60%;
             right: -661%;
+
+            @include mobile {
+                width: 174px;
+                right: -153%;
+            }
+        }
+
+        @include mobile {
+            padding: 0 0 82px 0;
         }
     }
 
@@ -70,11 +99,26 @@
     background: transparent;
     border: 1px solid $dark-pink-color;
     margin: 49px 0 65px 0;
+
+    @include mobile {
+        margin: 64px 0 65px 0;
+    }
 }
 
 &__catalog {
     display: flex;
     justify-content: space-between;
     margin-bottom: 128px;
+
+    @include tablet {
+        & li:last-child {
+            display: none;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin-bottom: 64px;
+        }
+    }
 }
 }

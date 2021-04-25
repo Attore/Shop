@@ -1,6 +1,6 @@
 .header {
     background-color: $black-color;
-    
+
 
     &__navigation {
         display: none;
@@ -10,7 +10,7 @@
         width: 232px;
         top: 100%;
         right: 0%;
-        
+
     }
 
     &__title {
@@ -66,7 +66,10 @@
             display: block;
             text-decoration: none;
             align-self: center;
-            
+
+            @include tablet {
+                padding: 20px 0 12px 0;
+            }
 
             @include mobile {
                 text-align: center;
@@ -84,17 +87,21 @@
         &-list {
             display: flex;
             align-items: center;
+
+            & li:last-child>a {
+                color: $dark-pink-color
+            }
+            
+            @include tablet {
+                margin-right: 16px;
+            }
         }
 
-        &-link  {
+        &-link {
             text-decoration: none;
             @include font (14px, 17px, 300);
             text-transform: uppercase;
             color: $some-black-color;
-            
-            &--active {
-                color: $dark-pink-color
-            }
         }
     }
 
@@ -147,11 +154,17 @@
             @include mobile {
                 width: 152px;
             }
-                }
+        }
     }
 }
 
 .flex {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
