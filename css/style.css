@@ -538,12 +538,6 @@ body {
   margin: 0 0 48px;
 }
 
-@media (max-width: 767px) {
-  .product__description {
-    margin: 0 auto;
-  }
-}
-
 .product__title {
   font-size: 13px;
   line-height: 16px;
@@ -1390,6 +1384,12 @@ legend {
   }
 }
 
+@media (max-width: 767px) {
+  .description__product {
+    margin: 0 auto;
+  }
+}
+
 .description__titel {
   font-size: 14px;
   line-height: 17px;
@@ -1465,7 +1465,7 @@ legend {
 @media (max-width: 767px) {
   .description__price::after {
     width: 174px;
-    right: -153%;
+    right: -137%;
   }
 }
 

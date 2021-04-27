@@ -92,10 +92,6 @@
         background: $gray-color;
         padding: 25px 29px 20px 17px;
         margin: 0 0 48px;
-
-        @include mobile {
-            margin: 0 auto;
-        }
     }
 
     &__title {

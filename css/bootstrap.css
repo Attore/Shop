@@ -2950,7 +2950,8 @@ textarea.form-control-lg {
   font-family: Lato;
 }
 
-@media (max-width: 375px) {
+
+@media (max-width: 575px) {
   .btn-secondary {
     font-size: 10px;
   line-height: 12px;
@@ -3658,7 +3659,7 @@ textarea.form-control-lg {
   margin: 0 22px 0 0;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .dropdown {
     margin: 0;
   }
