@@ -1,0 +1,44 @@
+.catalog {
+
+    &__dropdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__radio {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+    &__menu {
+        min-width: 79px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 360px);
+        grid-template-rows: repeat(3, 581px);
+        justify-content: space-between;
+        grid-row-gap: 30px;
+        margin-top: 133px;
+        margin-bottom: 188px;
+
+            @include tablet {
+                grid-template-columns: repeat(2, 360px);
+                grid-template-rows: repeat(4, 581px);
+                margin-top: 81px;
+                margin-bottom: 147px;
+                &> li:last-child {
+                    display: none;
+                }
+
+                @include mobile {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(8, 581px);
+                }
+            }
+    }
+
+}
+
